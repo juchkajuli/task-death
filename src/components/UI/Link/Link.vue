@@ -69,10 +69,6 @@ export default {
     font-weight: normal;
   }
 
-  .btn-link {
-    z-index: -10;
-  }
-
   .link {
     background: linear-gradient(90deg, rgba(76, 217, 100, 0.9) -6.2%, rgba(50, 185, 73, 0.9) 100%);
     display: inline-block;

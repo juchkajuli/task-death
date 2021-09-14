@@ -116,7 +116,24 @@ export default {
 
 .content {
   height: 100vh;
-  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.content::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+.content::-webkit-scrollbar-track {
+  background: #202024;        /* color of the tracking area */
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, .1);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #202024;  /* creates padding around scroll thumb */
 }
 
 .color {
@@ -167,7 +184,7 @@ export default {
     box-sizing: border-box;
     border-radius: 3px;
     width: 259px;
-    margin: auto;
+    margin: 0 auto;
     padding: 1rem 1rem;
     font-size: 16px;
     line-height: 25px;
@@ -175,13 +192,10 @@ export default {
   }
 
   .hover {
-    height: 17px;
     cursor: pointer;
     margin: 2rem auto 0;
-    transition: height 3s;
   }
-  .hover:hover {
-    height: 45px;
-    transition: height 3s;
-  }
+
+  
+
 </style>

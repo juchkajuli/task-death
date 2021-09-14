@@ -1,5 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import QuestionTwo from '../components/Questions/QuestionTwo/QuestionTwo.vue'
+import QuestionThree from '../components/Questions/QuestionThree/QuestionThree.vue'
+import QuestionFour from '../components/Questions/QuestionFour/QuestionFour.vue'
+import QuestionFive from '../components/Questions/QuestionFive/QuestionFive.vue'
+import Answer from '../components/Content/Answer.vue'
 
 const routes = [
   {
@@ -8,12 +13,29 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/question2',
+    name: 'QuestionTwo',
+    component: QuestionTwo
+  },
+  {
+    path:'/question3',
+    name: 'QuestionThree',
+    component: QuestionThree
+  },
+  {
+    path: '/question4',
+    name: 'QuestionFour',
+    component: QuestionFour
+  },
+  {
+    path: '/question5',
+    name: 'QuestionFive',
+    component: QuestionFive
+  },
+  {
+    path:'/answer',
+    name: 'Answer',
+    component: Answer
   }
 ]
 
@@ -21,5 +43,6 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+
 
 export default router
